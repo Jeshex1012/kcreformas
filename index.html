@@ -448,45 +448,87 @@
   </div>
   <div class="hero-right">
     <div class="hero-img-main">
-      <svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-      <!-- Fondo negro -->
-      <rect width="100%" height="100%" fill="#000"/>
+      <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
 
-      <!-- Techo -->
-      <polygon points="200,250 400,120 600,250 560,250 400,160 240,250" fill="#444"/>
-      <rect x="520" y="160" width="40" height="90" fill="#444"/>
+        <defs>
+          <linearGradient id="gradK" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ff7a00"/>
+            <stop offset="100%" stop-color="#d35400"/>
+          </linearGradient>
 
-      <!-- Letra K -->
-      <text x="230" y="450" font-family="Arial Black, sans-serif" font-size="220" fill="#ff6a00">K</text>
+          <linearGradient id="gradC" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#5a5a5a"/>
+            <stop offset="100%" stop-color="#1a1a1a"/>
+          </linearGradient>
 
-      <!-- Letra C -->
-      <text x="400" y="450" font-family="Arial Black, sans-serif" font-size="220" fill="#555">C</text>
+          <filter id="shadow">
+            <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
+          </filter>
+        </defs>
 
-      <!-- Martillo (simplificado) -->
-      <rect x="520" y="180" width="15" height="80" fill="#ff6a00" transform="rotate(-25 520 180)"/>
-      <rect x="500" y="150" width="80" height="25" rx="5" fill="#777" transform="rotate(-25 500 150)"/>
+        <!-- TECHO -->
+        <g fill="#3a3f44">
+          <path d="M180 260 L400 120 L620 260 L570 260 L400 170 L230 260 Z"/>
+          <rect x="540" y="150" width="35" height="110"/>
+        </g>
 
-      <!-- Nivel -->
-      <rect x="600" y="190" width="120" height="35" rx="8" fill="#333"/>
-      <rect x="650" y="200" width="20" height="15" fill="#8bc34a"/>
-      <circle cx="620" cy="207" r="6" fill="#ff6a00"/>
-      <circle cx="700" cy="207" r="6" fill="#ff6a00"/>
+        <!-- MARTILLO -->
+        <g transform="rotate(-25 580 170)">
+          <rect x="570" y="170" width="14" height="90" fill="#ff7a00"/>
+          <rect x="535" y="140" width="90" height="28" rx="6" fill="#555"/>
+        </g>
 
-      <!-- Caja de texto -->
-      <rect x="150" y="500" width="500" height="140" fill="#111"/>
+        <!-- NIVEL -->
+        <rect x="600" y="200" width="140" height="35" rx="10" fill="#2e2e2e"/>
+        <rect x="660" y="210" width="20" height="15" fill="#9acd32"/>
+        <circle cx="620" cy="217" r="7" fill="#ff7a00"/>
+        <circle cx="720" cy="217" r="7" fill="#ff7a00"/>
 
-      <!-- Texto inferior -->
-      <text x="400" y="570" font-family="Arial Black, sans-serif" font-size="60" fill="#fff" text-anchor="middle">
-        REFORMAS
-      </text>
+        <!-- K -->
+        <g filter="url(#shadow)">
+          <path d="
+            M250 460 
+            L250 250 
+            L320 250 
+            L320 340 
+            L400 250 
+            L480 250 
+            L380 360 
+            L490 460 
+            L400 460 
+            L320 380 
+            L320 460 
+            Z
+          " fill="url(#gradK)"/>
+        </g>
 
-      <text x="400" y="620" font-family="Arial Black, sans-serif" font-size="45" fill="#fff" text-anchor="middle">
-        INTEGRALES
-      </text>
+        <!-- C CORREGIDA (más sólida y proporcional) -->
+        <g filter="url(#shadow)">
+          <path d="
+            M650 300
+            A120 120 0 1 0 650 420
+            L600 420
+            A70 70 0 1 1 600 300
+            Z
+          " fill="url(#gradC)"/>
+        </g>
 
-      <!-- Líneas decorativas -->
-      <line x1="200" y1="610" x2="300" y2="610" stroke="#fff" stroke-width="3"/>
-      <line x1="500" y1="610" x2="600" y2="610" stroke="#fff" stroke-width="3"/>
+        <!-- BASE -->
+        <rect x="150" y="520" width="520" height="150" fill="#111"/>
+
+        <!-- TEXTO -->
+        <text x="410" y="600" font-size="65" font-family="Arial Black, sans-serif" fill="#fff" text-anchor="middle">
+          REFORMAS
+        </text>
+
+        <text x="410" y="655" font-size="45" font-family="Arial Black, sans-serif" fill="#fff" text-anchor="middle">
+          INTEGRALES
+        </text>
+
+        <!-- LÍNEAS -->
+        <line x1="200" y1="640" x2="300" y2="640" stroke="#fff" stroke-width="3"/>
+        <line x1="520" y1="640" x2="620" y2="640" stroke="#fff" stroke-width="3"/>
+
       </svg>
       <!--<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="20" y="90" width="60" height="70" stroke="white" stroke-width="2"/>
